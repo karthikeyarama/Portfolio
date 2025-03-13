@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    filter: none;
+}
+
+img {
+    filter: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(33, 32, 32);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Ensures transform works properly */
+}
+
+nav ul li a:hover {
+    color: #FF6347; /* Change color on hover */
+    transform: scale(1.2); /* Zoom-in effect */
+}
+
+
+
+.left {
+    font-size: 1.5rem;
+    color: white;
+}
+.left:hover {
+    transform: scale(1.1); /* Zoom in effect */
+    color: #FF6347; /* Change color to Tomato */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+}
+
+.content h1 {
+    font-size: 3rem;
+    text-align: left;
+    margin-right: 100px;
+    margin-left: -80px;
+}
+
+.content h1 span {
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.content h1 span:hover {
+    animation: jump 0.5s ease;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.content img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    margin-left: 100px;
+    border-radius: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.highlight {
+    color: #FF6347;
+}
+
+#education {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#education h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+#education:hover h2 {
+    color: #FF6347; /* Highlight effect on hover */
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-item {
+    background-color: #444;
+    color: white;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px) scale(1.02); /* Lift effect */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.college-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    object-fit: contain;
+    filter: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item:hover .college-logo {
+    transform: scale(1.1); /* Slight zoom on college logo */
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.timeline-item:hover h3 {
+    color: #FF6347; /* Change title color on hover */
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#skills {
+    background-color: #000;
+}
+
+#skills h2,
+#education h2,
+#projects h2,
+#contact h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#skills p,
+#education p,
+#projects p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact input,
+#contact textarea {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+#contact .submit {
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#skills {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+}
+
+#skills:hover h2,
+#education:hover h2,
+#projects:hover h2,
+#contact:hover h2 {
+    color: #FF6347;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill-item {
+    background-color: #444;
+    border-radius: 10px;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out; /* Added smooth transition */
+}
+
+.skill-item:hover {
+    transform: translateY(-5px) scale(1.05); /* Added slight zoom effect */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item::after {
+    content: attr(alt); /* Display the image's alt text */
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.skill-item:hover::after {
+    opacity: 1;
+}
+/* Ensuring the skill icons/images adjust properly */
+.skill-item img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-item:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+#projects {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.project-card {
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 550px;
+}
+
+/* Zoom in effect and stay zoomed when hovered */
+.project-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover h3 {
+    color: #FF6347;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #FF6347;
+    text-decoration: none;
+    border: 1px solid #FF6347;
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #FF6347;
+    color: white;
+}
+
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+#contact {
+    background-color: #1a1a1a;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: white;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #000;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #FF6347;
+    outline: none;
+}
+
+#contact form textarea {
+    height: 150px;
+    resize: none;
+}
+
+#contact form button.submit {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #FF6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for transform */
+}
+
+#contact form button.submit:hover {
+    background-color: #FF6347;
+    transform: scale(1.1); /* Zoom effect */
+}
+
+
+/* Contact form hover effects */
+#contact form input:hover,
+#contact form textarea:hover {
+    border-color: #FF6347;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(33, 32, 32);
+}
+
+
+/* Initial zoom-in and zoom-out animation */
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply the animation when the page loads */
+.portfolio-pic {
+    animation: zoomEffect 1.5s ease-in-out;
+}
+
+/* Zoom in when hovered */
+.portfolio-pic:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.portfolio-pic:not(:hover) {
+    transition: transform 1s ease-out;
+}
+
+.icon-container {
+    display: flex; /* Align icons in one row */
+    align-items: center; /* Centers them vertically */
+    justify-content: flex-start; /* Aligns to the left */
+    margin-top: 10px;
+    gap: 5px; /* Small gap between icons */
+}
+
+.github-img, .linkedin-img, .instagram-img {
+    width: 35px !important;  /* Smaller size */
+    height: 35px !important; /* Enforce strict height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular icons */
+    transition: transform 0.3s ease-in-out;
+    margin: 0 !important; /* Remove any extra spacing */
+    padding: 0 !important; /* Ensure no padding */
+    display: block; /* Remove extra spacing from inline elements */
+    left: -2px;
+}
+
+.github-img:hover, .linkedin-img:hover, .instagram-img:hover {
+    transform: scale(1.2); /* Slight hover effect */
+}
+
+.left {
+    
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
